@@ -1,0 +1,64 @@
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+@mixin calc-grid-width($some-number) {
+	$getfactor: #{12 / $some-number};
+	$percentage: #{100 / $getfactor};
+	$content: $percentage + '%';
+
+	width: $content;
+}
+@mixin singleSizeForBreakpoint($breakpoint, $number){
+	.flex-#{$breakpoint}-#{$number}{
+		@include calc-grid-width("#{$number}");
+	}
+}
+
+@mixin calc-grid-offset($some-number) {
+	$getfactor: #{12 / $some-number};
+	$percentage: #{100 / $getfactor};
+	$hundredMinusPercentage: #{100 - $percentage};
+	$content: $percentage + '%';
+	margin-left: $content;
+}
+@mixin singleOffsetForBreakpoint($breakpoint, $number){
+	.flex-#{$breakpoint}-offset-#{$number}{
+		@include calc-grid-offset("#{$number}");
+	}
+}
+
+@mixin sizesForBreakpoint($breakpoint){
+	@for $i from 1 through 12 {
+		@include singleSizeForBreakpoint($breakpoint, $i);
+	}
+	@for $i from 1 through 12 {
+		@include singleOffsetForBreakpoint($breakpoint, $i);
+	}
+}
+
+*[class^="flex-"]{
+	width:100%;
+	display: flex;
+}
+
+.flexgrid{
+	display: flex;
+	
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}
+	
+@include sizesForBreakpoint("xs");
+@media (min-width: $screen-sm-min) {
+	@include sizesForBreakpoint("sm");
+}
+@media (min-width: $screen-md-min) {
+	@include sizesForBreakpoint("md");
+}
+@media (min-width: $screen-lg-min) { 
+	@include sizesForBreakpoint("lg");
+}
+
