@@ -3,7 +3,7 @@ A CSS3 flex box based grid
 
 THIS PROJECT IS CURRENTLY `WIP` AND CAN COINTAIN BUGS
 
-[Demo](https://rawgit.com/xremix/Flexgrid/master/html)
+[Demo](https://rawgit.com/xremix/Flexgrid/master/demo.html)
 
 ##Features
 - CSS Only
@@ -19,7 +19,6 @@ For more details check [Can I use.com](http://caniuse.com/#search=flex)
 ####Basic
 ```HTML
 <div class="flexgrid">
-
 	<div class="flex-xs-1">
 		<div class="item-content">XS 1</div>
 	</div>
@@ -52,3 +51,18 @@ For more details check [Can I use.com](http://caniuse.com/#search=flex)
 	</div>
 </div>
 ```
+
+##Documentation
+###Breakpoints
+
+Flexgrid is using the same Breakpoints as Boostrap 3
+
+| Class        | Size           |
+| ------------- |:-------------:|
+| flex-xs-      | > 768px |
+| flex-sm-      | < 768px |
+| flex-md-      | < 992px |
+| flex-lg-      | < 1200px |
+
+###Offset
+The offset works the same way than the grid itself `flex-xs-offset-`
