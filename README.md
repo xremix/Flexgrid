@@ -1,7 +1,6 @@
 # Flexgrid
-A CSS3 flex box based grid
+A super lightweight CSS3 flex box based grid
 
-THIS PROJECT IS CURRENTLY `WIP` AND CAN COINTAIN BUGS
 
 [Demo](https://rawgit.com/xremix/Flexgrid/master/demo.html)
 
