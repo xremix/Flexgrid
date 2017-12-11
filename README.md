@@ -4,18 +4,18 @@ A super lightweight CSS3 flex box based grid
 
 [Demo](https://rawgit.com/xremix/Flexgrid/master/demo.html)
 
-##Features
+## Features
 - CSS Only
 - Super Lightweight (Only 3KB)
 - Rows will size to the same height
 
-##Browser compatiblity
+## Browser compatiblity
 
 All modern web browsers, IE9 and later are supported.
 For more details check [Can I use.com](http://caniuse.com/#search=flex)
 
-##Usage
-####Basic
+## Usage
+#### Basic
 ```HTML
 <div class="flexgrid">
 	<div class="flex-xs-1">
@@ -36,7 +36,7 @@ For more details check [Can I use.com](http://caniuse.com/#search=flex)
 </div>
 ```
 
-####Offset
+#### Offset
 ```HTML
 <div class="flexgrid">
 	<div class="flex-xs-6 flex-xs-offset-6">
@@ -51,8 +51,8 @@ For more details check [Can I use.com](http://caniuse.com/#search=flex)
 </div>
 ```
 
-##Documentation
-###Breakpoints
+## Documentation
+### Breakpoints
 
 Flexgrid is using the same Breakpoints as Boostrap 3
 
@@ -63,5 +63,5 @@ Flexgrid is using the same Breakpoints as Boostrap 3
 | flex-md-      | < 992px |
 | flex-lg-      | < 1200px |
 
-###Offset
+### Offset
 The offset works the same way than the grid itself `flex-xs-offset-`
